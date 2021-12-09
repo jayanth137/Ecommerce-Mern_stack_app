@@ -35,7 +35,6 @@ margin-right: 20px;
 const Center = styled.div`
   flex: 1;
   padding: 20px;
-  
 `;
 
 const Title = styled.h3`
