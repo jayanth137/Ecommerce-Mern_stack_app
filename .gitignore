@@ -1,3 +1,4 @@
 node_modules
 .env
 .prettier.json
+yarn-error.log

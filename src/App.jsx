@@ -1,3 +1,4 @@
+import Cart from "./Pages/Cart";
 import Home from "./Pages/Home";
 import { Login } from "./Pages/Login";
 import Product from "./Pages/Product";
