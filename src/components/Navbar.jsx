@@ -1,6 +1,7 @@
 import { Search, ShoppingCart } from "@mui/icons-material";
-import { Badge } from "@mui/material";
-import React from "react";
+import { Badge} from "@mui/material";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
@@ -60,7 +61,11 @@ const MenuItem = styled.div`
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
+
+
 const Navbar = () => {
+
+
   return (
     <Container>
       <Wrapper>
@@ -72,18 +77,30 @@ const Navbar = () => {
             <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
-        <Center>
+        <Link to="/" style={{  textDecoration: 'none'}}>
+        <Center >
           {" "}
           <Logo>GAMA.</Logo>{" "}
+          
         </Center>
+        </Link>
         <Right>
+        <Link to="/register" style={{  textDecoration: 'none'}}>
+
           <MenuItem>REGISTER </MenuItem>
+          </Link>
+          <Link to="login" style={{  textDecoration: 'none'}}>
+
           <MenuItem>SIGN IN</MenuItem>
+          </Link>
+          <Link to="/cart">
           <MenuItem>
             <Badge badgeContent={4} color="primary">
               <ShoppingCart />
+              
             </Badge>
           </MenuItem>
+          </Link>
         </Right>
       </Wrapper>
     </Container>

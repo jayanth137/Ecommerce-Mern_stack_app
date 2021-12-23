@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { popularProducts } from "../data";
-import Product from "./Product";
+import Product from "./Product"; 
 
 const Container = styled.div`
   display: flex;
@@ -8,12 +9,13 @@ const Container = styled.div`
   flex-wrap: wrap;
 `;
 
-const Products = () => {
+const Products = ({categories,filters,sort}) => {
   return (
     <Container>
       {popularProducts.map((item) => (
         <Product item={item} key={item.id} />
       ))}
+
     </Container>
   );
 };
