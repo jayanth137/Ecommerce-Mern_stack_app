@@ -3,6 +3,7 @@ import {
   SearchOutlined,
   ShoppingCartOutlined,
 } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Info = styled.div`
@@ -72,6 +73,8 @@ const Product = ({ item }) => {
     <Container>
       <Circle />
       <Image src={item.img} />
+      <Link to="/cart">
+
       <Info>
         <Icon>
           <ShoppingCartOutlined />
@@ -83,6 +86,8 @@ const Product = ({ item }) => {
           <FavoriteBorderOutlined />
         </Icon>
       </Info>
+      </Link>
+
     </Container>
   );
 };
