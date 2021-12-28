@@ -1,6 +1,5 @@
 import { Search, ShoppingCart } from "@mui/icons-material";
 import { Badge} from "@mui/material";
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mobile } from "../responsive";
@@ -77,7 +76,7 @@ const Navbar = () => {
             <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
-        <Link to="/" style={{  textDecoration: 'none'}}>
+        <Link to="/" className="link">
         <Center >
           {" "}
           <Logo>GAMA.</Logo>{" "}
@@ -85,15 +84,15 @@ const Navbar = () => {
         </Center>
         </Link>
         <Right>
-        <Link to="/register" style={{  textDecoration: 'none'}}>
+        <Link to="/register" className="link">
 
           <MenuItem>REGISTER </MenuItem>
           </Link>
-          <Link to="login" style={{  textDecoration: 'none'}}>
+          <Link to="/login" className="link">
 
           <MenuItem>SIGN IN</MenuItem>
           </Link>
-          <Link to="/cart">
+          <Link to="/cart" className="link">
           <MenuItem>
             <Badge badgeContent={4} color="primary">
               <ShoppingCart />

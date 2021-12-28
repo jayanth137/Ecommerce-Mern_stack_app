@@ -5,6 +5,7 @@ import Product from './Pages/Product'
 import ProductList from './Pages/ProductList'
 import Register from './Pages/Register'
 import { Routes, Route } from 'react-router-dom'
+import "./App.css"
 
 const App = () => {
     return (
